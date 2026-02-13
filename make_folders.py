@@ -2,6 +2,7 @@ import os
 from datetime import datetime, timedelta
 
 def make_dir(first_date):
+    first_date = datetime.strptime(first_date, "%Y-%m-%d").date()
     year = first_date.year
     last_date=datetime(year,12,31).date()
     total=(last_date-first_date).days
@@ -14,6 +15,4 @@ def make_dir(first_date):
         print("Folders already exist")
 
 start_date_input=input("Enter starting date in yyyy-mm-dd format:")
-start_date=datetime.strptime(start_date_input,"%Y-%m-%d").date()
-
-make_dir(start_date)
+make_dir(start_date_input)
