@@ -1,7 +1,7 @@
 import os
 from datetime import datetime,timedelta
 
-def make_dir(start_date,end_date):
+def make_dir(end_date,start_date=datetime.now().date()):
 
     total_days_from_now=(end_date-start_date).days
 
@@ -9,7 +9,7 @@ def make_dir(start_date,end_date):
         start_date+=timedelta(days=1)
         os.mkdir(f"C:/Users/beerva.joshi/PycharmProjects/Date_folders/{start_date}")
 
-current_date=datetime.now().date()
-last_date=datetime(2026,12,31).date()
+last_date_input=input("enter in YYYY-MM-DD format: ")
+last_date=datetime.strptime(last_date_input,"%Y-%m-%d").date()
 
-make_dir(current_date,last_date)
+make_dir(last_date)
