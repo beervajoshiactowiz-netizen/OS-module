@@ -14,5 +14,5 @@ print(days)
 for i in range(days):
     n+=timedelta(days=1)
     print(n)
-    os.mkdir(f"C:/Users/beerva.joshi/PycharmProjects/Date_folders/{n}")
+    # os.mkdir(f"C:/Users/beerva.joshi/PycharmProjects/Date_folders/{n}")
 
