@@ -14,7 +14,7 @@ def make_dir(first_date):
             total_day = calendar.monthrange(first_date.year, first_date.month)[1]
             # print(last_day)
             reversed_day = total_day - first_date.day + 1
-            reversed_date = f"{reversed_day}-{first_date.month}-{first_date.year}"
+            reversed_date = f"{first_date.year}-{first_date.month}-{reversed_day}"
             extensions = ["txt", "py", "json", "html"]
 
             for ext in extensions:
